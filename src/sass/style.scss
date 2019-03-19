@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@import './_notosansjp';
+@import './_variable';
+@import './_reset';
+@import './_mixin';
+@import './_common';
+
+// index style
+// sp style
+body {
+	display: block;
+	width: 100%;
+}
+
+// pc style
+@include pc {
+	// ここからPC記述
+	.test {
+		color: #000;
+	}
+}

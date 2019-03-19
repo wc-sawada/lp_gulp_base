@@ -1,0 +1,58 @@
+//mediaQuery
+@mixin iphone5 {
+	@media screen and (max-width: 334px) {
+		@content;
+	}
+}
+@mixin galaxy {
+	@media screen and (min-width: 335px) {
+		@content;
+	}
+}
+@mixin iphone6 {
+	@media screen and (min-width: 374px) {
+		@content;
+	}
+}
+@mixin iphone6plus {
+	@media screen and (min-width: 414px) {
+		@content;
+	}
+}
+@mixin pc {
+	@media screen and (min-width:751px) {
+		@content;
+	}
+}
+
+// keyframes mixin
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation($animation-name) {
+	-webkit-animation: $animation-name;
+	-moz-animation: $animation-name;
+	animation: $animation-name;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+// rem font-size
+@mixin fz($size: 24, $base: 16) {
+	font-size: $size + px;
+	font-size: ($size / ($base * 0.625)) + rem;
+}
+
