@@ -12,3 +12,18 @@ npm install -g npx
 # ディレクトリ説明
 src…圧縮、コンパイル前のソース等  
 public…公開したいもの  
+
+# 初期にやること
+package.json内をインストール
+```
+npm i
+```
+
+# コマンド
+* ディレクトリ内にターミナルまたはコマンドプロンプトで移動
+* 下記コマンドでgulp起動
+```
+npx gulp develop
+```
+* http://localhost:3000/　のサーバーが立ち上がる
+* 止めるときは ctrl + c で Y を選択
